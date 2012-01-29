@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:batch="http://www.springframework.org/schema/batch"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <!-- Import the default batch context -->
+    <beans:import resource="classpath:/META-INF/spring/default-batch-context.xml"/>
+
+    <batch:job id="example-job">
+        <batch:step id="step1">
+            <batch:tasklet>
+                <batch:chunk reader="reader" writer="writer" commit-interval="1"/>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <beans:bean id="reader" class="${package}.batch.example.ExampleItemReader"/>
+    <beans:bean id="writer" class="${package}.batch.example.ExampleItemWriter"/>
+</beans:beans>

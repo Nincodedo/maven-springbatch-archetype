@@ -1,0 +1,49 @@
+Summary
+-------
+Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project
+template with some formatting, structure etc changes. I wanted something I could generate a quick skeleton project from
+to reproduce issues, try out new features, and so on.
+
+
+Contact
+-------
+Chris Schaefer - chris@dtzq.com
+
+
+Features
+--------
+Some features that work out of the box are:
+
+* Basic reader and writer example.
+* Uses hsqldb as an in memory data source.
+
+
+Local Install
+-------------
+cd maven-springbatch-archetype
+mvn clean compile package install
+
+
+Use
+---
+cd ~/work (or wherever you want to build to)
+
+mvn archetype:generate \
+  -DarchetypeGroupId=com.dtzq \
+  -DarchetypeArtifactId=maven-springbatch-archetype \
+  -DarchetypeVersion=1.0-SNAPSHOT \
+  -DgroupId=your_group_id \
+  -DartifactId=the_artifact_id \
+  -Dpackage=the_package_name \
+  -Dversion=the_version
+
+Answer the questions and the build will end up in a directory named after your artifact ID.
+
+cd $artifactId ; mvn clean compile package
+
+At this point you can either run the resulting jar in the target/ directory passing the job bean config and job name
+along with providing the required libraries on the classpath or run via maven using the command:
+
+mvn exec:java
+
+See the exec-maven-plugin section of the pom for more info on setting the job bean config file and job name.
