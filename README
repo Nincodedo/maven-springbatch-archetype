@@ -1,8 +1,6 @@
 Summary
 -------
-Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project
-template with some formatting, structure etc changes. I wanted something I could generate a quick skeleton project from
-to reproduce issues, try out new features, and so on.
+Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project template with some formatting, structure etc changes. I wanted something I could generate a quick skeleton project from to reproduce issues, try out new features, and so on.
 
 
 Contact
@@ -41,8 +39,7 @@ Answer the questions and the build will end up in a directory named after your a
 
 cd $artifactId ; mvn clean compile package
 
-At this point you can either run the resulting jar in the target/ directory passing the job bean config and job name
-along with providing the required libraries on the classpath or run via maven using the command:
+At this point you can either run the resulting jar in the target/ directory passing the job bean config and job name along with providing the required libraries on the classpath or run via maven using the command:
 
 mvn exec:java
 
