@@ -18,8 +18,9 @@ Some features that work out of the box are:
 
 Local Install
 -------------
-cd maven-springbatch-archetype
-mvn clean compile package install
+clone the archetype
+cd maven-springbatch-archetype (or your custom clone directory)
+mvn install
 
 
 Use
@@ -37,7 +38,7 @@ mvn archetype:generate \
 
 Answer the questions and the build will end up in a directory named after your artifact ID.
 
-cd $artifactId ; mvn clean compile package
+cd $artifactId ; mvn package
 
 At this point you can either run the resulting jar in the target/ directory passing the job bean config and job name along with providing the required libraries on the classpath or run via maven using the command:
 
