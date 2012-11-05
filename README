@@ -1,7 +1,6 @@
 Summary
 -------
-Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project
-template with some formatting, structure, build etc changes and packaged as an archetype.
+Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project template with some formatting, structure, build etc changes and packaged as an archetype.
 
 
 Contact
@@ -45,9 +44,7 @@ cd $artifactId ; mvn package
 At this point you can run the job two ways out of the box:
 
 1. Maven assembled package.
-   * After running "mvn package" a file with the naming convention of "the_artifact_id-the_version-distribution.tar.gz"
-     will be located in the target/ directory of the project. Extract this archive where you want to run the batch job
-     and invoke via the ./bin/runJob.sh script. You may need to make this script executable.
+   * After running "mvn package" a file with the naming convention of "the_artifact_id-the_version-distribution.tar.gz" will be located in the target/ directory of the project. Extract this archive where you want to run the batch job and invoke via the ./bin/runJob.sh script. You may need to make this script executable.
    * This work based off Lucas Ward's blog post, located at:
      * http://www.lucasward.net/2010/07/spring-batch-deployment-example.html
 
