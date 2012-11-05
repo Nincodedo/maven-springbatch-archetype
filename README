@@ -1,6 +1,7 @@
 Summary
 -------
-Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project template with some formatting, structure etc changes. I wanted something I could generate a quick skeleton project from to reproduce issues, try out new features, and so on.
+Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project
+template with some formatting, structure, build etc changes and packaged as an archetype.
 
 
 Contact
@@ -14,6 +15,7 @@ Some features that work out of the box are:
 
 * Basic reader and writer example.
 * Uses hsqldb as an in memory data source.
+* Ability to run via maven or a deployment package.
 
 
 Local Install
@@ -30,18 +32,25 @@ cd ~/work (or wherever you want to build to)
 mvn archetype:generate \
   -DarchetypeGroupId=com.dtzq \
   -DarchetypeArtifactId=maven-springbatch-archetype \
-  -DarchetypeVersion=1.0-SNAPSHOT \
+  -DarchetypeVersion=1.1 \
   -DgroupId=your_group_id \
   -DartifactId=the_artifact_id \
   -Dpackage=the_package_name \
   -Dversion=the_version
 
-Answer the questions and the build will end up in a directory named after your artifact ID.
+Answer any questions and the build will end up in a directory named after your artifact ID.
 
 cd $artifactId ; mvn package
 
-At this point you can either run the resulting jar in the target/ directory passing the job bean config and job name along with providing the required libraries on the classpath or run via maven using the command:
+At this point you can run the job two ways out of the box:
 
-mvn exec:java
+1. Maven assembled package.
+   * After running "mvn package" a file with the naming convention of "the_artifact_id-the_version-distribution.tar.gz"
+     will be located in the target/ directory of the project. Extract this archive where you want to run the batch job
+     and invoke via the ./bin/runJob.sh script. You may need to make this script executable.
+   * This work based off Lucas Ward's blog post, located at:
+     * http://www.lucasward.net/2010/07/spring-batch-deployment-example.html
 
-See the exec-maven-plugin section of the pom for more info on setting the job bean config file and job name.
+2. Maven exec
+   * Run: mvn exec:java
+   * See the exec-maven-plugin section of the pom for more info on setting the job bean config file and job name.

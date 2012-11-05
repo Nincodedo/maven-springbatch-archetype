@@ -12,11 +12,11 @@
     <name>${artifactId}</name>
     <description>${artifactId} - ${version}</description>
     <properties>
-        <spring.framework.version>3.1.0.RELEASE</spring.framework.version>
-        <spring.batch.version>2.1.8.RELEASE</spring.batch.version>
+        <spring.framework.version>3.1.2.RELEASE</spring.framework.version>
+        <spring.batch.version>2.1.9.RELEASE</spring.batch.version>
         <compiler.target.version>1.6</compiler.target.version>
         <compiler.source.version>1.6</compiler.source.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
         <dependency>
@@ -124,6 +124,24 @@
 			    	</archive>
 				</configuration>
 		    </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/descriptor.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-distribution</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 	<pluginRepositories>
