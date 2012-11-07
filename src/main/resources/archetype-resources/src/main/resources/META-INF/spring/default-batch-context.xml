@@ -15,7 +15,8 @@
 
     <!-- Default batch context. Uses HSQL as the datasource and initalizes it. -->
 
-    <context:property-placeholder location="classpath:default-batch.properties" />
+    <context:property-placeholder location="classpath:/META-INF/spring/default-batch.properties" />
+    <beans:import resource="classpath:/META-INF/spring/datasource-beans.xml"/>
 
     <jdbc:initialize-database data-source="dataSource">
         <jdbc:script location="${batch.schema.script}" />

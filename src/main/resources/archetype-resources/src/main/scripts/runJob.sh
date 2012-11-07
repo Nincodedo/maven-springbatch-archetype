@@ -5,4 +5,4 @@ if [ "$JAVA_HOME" = "" ]; then
   exit 1
 fi
 
-$JAVA_HOME/bin/java -cp resources/:lib/* org.springframework.batch.core.launch.support.CommandLineJobRunner example-job.xml example-job
+$JAVA_HOME/bin/java -cp resources/:lib/* org.springframework.batch.core.launch.support.CommandLineJobRunner ${jobName}.xml ${jobName}

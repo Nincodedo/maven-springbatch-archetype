@@ -1,6 +1,6 @@
 Summary
 -------
-Maven archetype providing a pre-configured and basic Spring Batch setup. Mainly based off the STS Spring Batch project template with some formatting, structure, build etc changes and packaged as an archetype.
+Maven archetype providing a pre-configured and basic Spring Batch setup. This setup provides the most common starting point I have seen which is reading from a flat file and writing to a database.
 
 
 Contact
@@ -12,9 +12,10 @@ Features
 --------
 Some features that work out of the box are:
 
-* Basic reader and writer example.
+* Basic reader, processor and writer example.
 * Uses hsqldb as an in memory data source.
 * Ability to run via maven or a deployment package.
+* Example test coverage.
 
 
 Local Install
@@ -35,7 +36,8 @@ mvn archetype:generate \
   -DgroupId=your_group_id \
   -DartifactId=the_artifact_id \
   -Dpackage=the_package_name \
-  -Dversion=the_version
+  -Dversion=the_version \
+  -DjobName=the_job_name
 
 Answer any questions and the build will end up in a directory named after your artifact ID.
 

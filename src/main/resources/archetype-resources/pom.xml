@@ -36,6 +36,11 @@
             <version>${spring.framework.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.framework.version}</version>
+        </dependency>
+        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
             <version>2.2</version>
@@ -104,8 +109,8 @@
                 <configuration>
                     <mainClass>org.springframework.batch.core.launch.support.CommandLineJobRunner</mainClass>
                     <arguments>
-                        <argument>classpath*:/META-INF/spring/jobs/example/example-job.xml</argument>
-	    				<argument>example-job</argument>
+                        <argument>classpath*:/META-INF/spring/jobs/${jobName}/${jobName}.xml</argument>
+	    				<argument>${jobName}</argument>
     				</arguments>
 			    </configuration>
 			</plugin>

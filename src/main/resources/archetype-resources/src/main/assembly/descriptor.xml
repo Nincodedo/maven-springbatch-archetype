@@ -11,7 +11,7 @@
             <useDefaultExcludes>true</useDefaultExcludes>
         </fileSet>
         <fileSet>
-            <directory>src/main/resources/META-INF/spring/jobs/example</directory>
+            <directory>src/main/resources/META-INF/spring/jobs/${jobName}</directory>
             <outputDirectory>resources</outputDirectory>
             <useDefaultExcludes>true</useDefaultExcludes>
             <filtered>true</filtered>
