@@ -2,6 +2,8 @@ Summary
 -------
 Maven archetype providing a pre-configured and basic Spring Batch setup. This setup provides the most common starting point I have seen which is reading from a flat file and writing to a database.
 
+NOTE: For the most part this functionality has been merged into the Spring Batch project as of 2.2.0-BUILD-SNAPSHOT and can be found in the "archetypes/simple-cli" directory. While its not a full archetype, it provides similar capabilities and the ability to copy and edit the code as is.
+
 
 Contact
 -------
