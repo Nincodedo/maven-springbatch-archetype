@@ -12,8 +12,20 @@
     <name>${artifactId}</name>
     <description>${artifactId} - ${version}</description>
     <properties>
-        <spring.framework.version>3.1.2.RELEASE</spring.framework.version>
-        <spring.batch.version>2.1.9.RELEASE</spring.batch.version>
+        <spring.framework.version>3.2.4.RELEASE</spring.framework.version>
+        <spring.batch.version>2.2.1.RELEASE</spring.batch.version>
+        <cglib.version>2.2</cglib.version>
+        <junit.version>4.11</junit.version>
+        <commons.dbcp.version>1.4</commons.dbcp.version>
+        <commons.io.version>2.4</commons.io.version>
+        <hsqldb.version>1.8.0.10</hsqldb.version>
+        <aspectjrt.version>1.7.3</aspectjrt.version>
+        <aspectjweaver.version>1.7.3</aspectjweaver.version>
+        <log4j.version>1.2.17</log4j.version>
+        <maven.compiler.version>2.3.2</maven.compiler.version>
+        <maven.exec.plugin.version>1.2.1</maven.exec.plugin.version>
+        <maven.jar.plugin.version>2.4</maven.jar.plugin.version>
+        <maven.assembly.plugin.version>2.4</maven.assembly.plugin.version>
         <compiler.target.version>1.6</compiler.target.version>
         <compiler.source.version>1.6</compiler.source.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +34,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.7</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -43,7 +55,7 @@
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
-            <version>2.2</version>
+            <version>${cglib.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -63,32 +75,32 @@
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
-            <version>1.2.2</version>
+            <version>${commons.dbcp.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>1.4</version>
+            <version>${commons.io.version}</version>
         </dependency>
         <dependency>
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>1.8.0.7</version>
+            <version>${hsqldb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.6.8</version>
+            <version>${aspectjrt.version}</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.6.8</version>
+            <version>${aspectjweaver.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
+            <version>${log4j.version}</version>
         </dependency>
     </dependencies>
     <build>
@@ -96,7 +108,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>${maven.compiler.version}</version>
                 <configuration>
                     <source>${compiler.source.version}</source>
                     <target>${compiler.target.version}</target>
@@ -105,7 +117,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.1</version>
+                <version>${maven.exec.plugin.version}</version>
                 <configuration>
                     <mainClass>org.springframework.batch.core.launch.support.CommandLineJobRunner</mainClass>
                     <arguments>
@@ -117,7 +129,7 @@
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.1</version>
+                <version>${maven.jar.plugin.version}</version>
 				<configuration>
 					<archive>
 						<index>true</index>
@@ -131,7 +143,7 @@
 		    </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.3</version>
+                <version>${maven.assembly.plugin.version}</version>
                 <configuration>
                     <descriptors>
                         <descriptor>src/main/assembly/descriptor.xml</descriptor>

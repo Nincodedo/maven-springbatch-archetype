@@ -2,22 +2,25 @@ package ${package};
 
 /**
  * <p>
- * Domain object representing infomation about a person.
+ * Domain object representing information about a person.
  * </p>
  *
  * @author Chris Schaefer
  */
 public class Person {
-    private final String firstName;
-    private final String lastName;
+    private String firstName;
+    private String lastName;
 
-    public Person(final String firstName, final String lastName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getLastName() {
