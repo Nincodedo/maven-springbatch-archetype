@@ -14,13 +14,10 @@
     <properties>
         <spring.framework.version>3.2.4.RELEASE</spring.framework.version>
         <spring.batch.version>2.2.1.RELEASE</spring.batch.version>
-        <cglib.version>2.2</cglib.version>
         <junit.version>4.11</junit.version>
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <commons.io.version>2.4</commons.io.version>
         <hsqldb.version>1.8.0.10</hsqldb.version>
-        <aspectjrt.version>1.7.3</aspectjrt.version>
-        <aspectjweaver.version>1.7.3</aspectjweaver.version>
         <log4j.version>1.2.17</log4j.version>
         <maven.compiler.version>2.3.2</maven.compiler.version>
         <maven.exec.plugin.version>1.2.1</maven.exec.plugin.version>
@@ -53,16 +50,6 @@
             <version>${spring.framework.version}</version>
         </dependency>
         <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib-nodep</artifactId>
-            <version>${cglib.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>${spring.framework.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.batch</groupId>
             <artifactId>spring-batch-core</artifactId>
             <version>${spring.batch.version}</version>
@@ -86,16 +73,6 @@
             <groupId>hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>${hsqldb.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>${aspectjrt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectjweaver.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -161,13 +138,4 @@
             </plugin>
 		</plugins>
 	</build>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>Codehaus</id>
-			<url>http://repository.codehaus.org/</url>
-    		<snapshots>
-		    	<enabled>false</enabled>
-			</snapshots>
-	    </pluginRepository>
-	</pluginRepositories>
 </project>
