@@ -13,23 +13,19 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Default batch context. Uses HSQL as the datasource and initalizes it. -->
-
     <context:property-placeholder location="classpath:/META-INF/spring/default-batch.properties"/>
 
-    <beans:import resource="classpath:/META-INF/spring/datasource-beans.xml"/>
-
     <jdbc:initialize-database data-source="dataSource">
-        <jdbc:script location="${batch.schema.script}"/>
+        <jdbc:script location="${schema.script}"/>
     </jdbc:initialize-database>
 
     <batch:job-repository id="jobRepository"/>
 
-    <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-                p:driverClassName="${batch.jdbc.driver}"
-                p:url="${batch.jdbc.url}"
-                p:username="${batch.jdbc.user}"
-                p:password="${batch.jdbc.password}"/>
+    <beans:bean id="dataSource" class="${jdbc.datasource.class}"
+                p:driverClassName="${jdbc.driver}"
+                p:url="${jdbc.url}"
+                p:username="${jdbc.user}"
+                p:password="${jdbc.password}"/>
 
     <beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
                 p:dataSource-ref="dataSource"/>
