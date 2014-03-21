@@ -10,9 +10,9 @@
         http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:/${package.replace('.','/')}/test-batch.properties"/>
+    <context:property-placeholder location="classpath:/${package.replace('.','/')}/ExampleItemWriterTest.properties"/>
 
-    <beans:import resource="classpath:/${package.replace('.','/')}/test-datasource-beans.xml"/>
+    <beans:import resource="classpath:/${package.replace('.','/')}/test-batch-context.xml"/>
 
     <jdbc:initialize-database data-source="dataSource">
         <jdbc:script location="${person.sql.location}"/>

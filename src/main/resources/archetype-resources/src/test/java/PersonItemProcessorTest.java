@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * <p>
- * Example test case processing a {@link Person} using the {@link PersonItemProcessor}.
+ * Example test case transforming a {@link Person} using the {@link PersonItemProcessor}.
  * </p>
  */
 public class PersonItemProcessorTest {
