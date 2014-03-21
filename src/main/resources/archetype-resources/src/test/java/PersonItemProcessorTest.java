@@ -8,8 +8,6 @@ import static org.junit.Assert.assertEquals;
  * <p>
  * Example test case processing a {@link Person} using the {@link PersonItemProcessor}.
  * </p>
- *
- * @author Chris Schaefer
  */
 public class PersonItemProcessorTest {
     @Test

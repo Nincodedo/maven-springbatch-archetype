@@ -4,8 +4,6 @@ package ${package};
  * <p>
  * Domain object representing information about a person.
  * </p>
- *
- * @author Chris Schaefer
  */
 public class Person {
     private String firstName;
