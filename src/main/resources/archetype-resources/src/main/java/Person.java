@@ -26,6 +26,6 @@ public class Person {
     }
 
     public String toString() {
-        return "firstName: " + firstName + ", lastName: "  + lastName;
+        return "firstName: " + firstName + ", lastName: " + lastName;
     }
 }

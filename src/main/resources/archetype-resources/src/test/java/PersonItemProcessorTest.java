@@ -12,9 +12,9 @@ import static org.junit.Assert.assertEquals;
 public class PersonItemProcessorTest {
     @Test
     public void testProcessedPersonRecord() throws Exception {
-	    Person person = new Person();
-	    person.setFirstName("Jane");
-	    person.setLastName("Doe");
+        Person person = new Person();
+        person.setFirstName("Jane");
+        person.setLastName("Doe");
 
         Person processedPerson = new PersonItemProcessor().process(person);
 

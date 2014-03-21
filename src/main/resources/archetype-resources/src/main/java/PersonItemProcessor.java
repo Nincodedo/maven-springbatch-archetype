@@ -8,13 +8,13 @@ import org.springframework.batch.item.ItemProcessor;
  * <p>
  * An example {@link ItemProcessor} implementation that upper cases fields on the provided {@link Person} object.
  * </p>
- *
+ * <p/>
  * <p>
  * NOTE: {@link ItemProcessor}'s are optional, but here to serve as an example.
  * </p>
  */
 public class PersonItemProcessor implements ItemProcessor<Person, Person> {
-	private static Log LOG = LogFactory.getLog(PersonItemProcessor.class);
+    private static Log LOG = LogFactory.getLog(PersonItemProcessor.class);
 
     @Override
     public Person process(Person person) throws Exception {
@@ -25,7 +25,7 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
         transformedPerson.setFirstName(firstName);
         transformedPerson.setLastName(lastName);
 
-	    LOG.info("Transformed person: " + person + " Into: " + transformedPerson);
+        LOG.info("Transformed person: " + person + " Into: " + transformedPerson);
 
         return transformedPerson;
     }
