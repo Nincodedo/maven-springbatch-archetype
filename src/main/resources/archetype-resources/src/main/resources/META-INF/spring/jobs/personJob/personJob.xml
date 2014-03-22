@@ -10,12 +10,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:/META-INF/spring/jobs/personJob/personJob.properties"
-                                  ignore-unresolvable="true"/>
-
-    <beans:import resource="classpath:/META-INF/spring/default-batch-context.xml"/>
-    <beans:import resource="classpath:/META-INF/spring/jobs/personJob/personJob-beans.xml"/>
-
     <batch:job id="personJob">
         <batch:step id="step1">
             <batch:tasklet>
@@ -26,4 +20,6 @@
             <batch:end on="*"/>
         </batch:step>
     </batch:job>
+
+    <beans:import resource="classpath:/META-INF/spring/jobs/personJob/personJob-beans.xml"/>
 </beans:beans>
