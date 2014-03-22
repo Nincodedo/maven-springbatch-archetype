@@ -29,7 +29,7 @@ Besides running the tests that will occur during the package phase, you can:
 
 1. Use the Maven assembled package:
    * After running "mvn package" a file with the naming convention of "theArtifactId-version-distribution.tar.gz" will be located in the target/ directory of the project.
-   * Copy and extract this archive where you want to run the batch job and invoke via the ./bin/runJob.sh script. You may need to make this script executable.
+   * Copy and extract this archive to a directory where you want to run the batch job and invoke via the ./bin/runJob.sh script. You may need to make this script executable (chmod +x ./bin/runJob.sh).
 
 2. Execute the job via Maven:
    * Run: mvn exec:java
