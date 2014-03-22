@@ -19,7 +19,9 @@ $ cd maven-springbatch-archetype
 $ mvn install
 
 # Use
-mvn archetype:generate -DarchetypeGroupId=com.dtzq -DarchetypeArtifactId=maven-springbatch-archetype
+mvn archetype:generate -DarchetypeGroupId=com.dtzq -DarchetypeArtifactId=maven-springbatch-archetype -DarchetypeVersion=1.3
+
+At the current time, the latest release version is 1.3
 
 Answer any questions and the build will end up in a directory named after your artifact ID.
 
