@@ -97,8 +97,8 @@
                 <configuration>
                     <mainClass>org.springframework.batch.core.launch.support.CommandLineJobRunner</mainClass>
                     <arguments>
-                        <argument>classpath*:/META-INF/spring/jobs/${jobName}/${jobName}.xml</argument>
-                        <argument>${jobName}</argument>
+                        <argument>classpath*:/META-INF/spring/jobs/personJob/personJob.xml</argument>
+                        <argument>personJob</argument>
                     </arguments>
                 </configuration>
             </plugin>
