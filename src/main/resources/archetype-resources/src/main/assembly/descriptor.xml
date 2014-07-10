@@ -8,6 +8,8 @@
         <fileSet>
             <directory>src/main/scripts</directory>
             <outputDirectory>bin</outputDirectory>
+            <fileMode>755</fileMode>
+            <directoryMode>755</directoryMode>
             <useDefaultExcludes>true</useDefaultExcludes>
         </fileSet>
         <fileSet>
